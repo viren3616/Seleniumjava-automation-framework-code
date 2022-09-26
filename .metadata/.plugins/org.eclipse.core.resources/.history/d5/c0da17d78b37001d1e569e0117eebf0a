@@ -1,0 +1,27 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SearchJapaneseCarInUSA {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("SearchJapaneseCarInUSA");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver=new ChromeDriver();
+		
+		//Loading the Page
+		driver.get("https://google.com");
+				
+		//Sending keyword vehicle type for search
+		driver.findElement(By.name("q")).sendKeys("Search Japanese Car In USA");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		
+		
+
+	}
+
+}

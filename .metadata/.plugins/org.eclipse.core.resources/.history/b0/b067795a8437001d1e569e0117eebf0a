@@ -1,0 +1,29 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class VehicleTypeserch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Checking the price of 2023 Dodge Challenger from Carsanddriver");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver=new ChromeDriver();
+		//Loading the Page
+		driver.get("https://google.com");
+		//Sending keyword vehicle type for search
+		driver.findElement(By.name("q")).sendKeys("vehicle type ");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	    // select https://www.caranddriver.com/
+	    driver.findElement(By.xpath("//h3[contains(text(),'Vehicle Types, Car Body Styles Explained - Car and')]")).click();
+	    // Searching for Best New Sports Cars of 2022
+	    driver.findElement(By.xpath("//a[normalize-space()='Best New Sports Cars']")).click();
+	    // Click on Review, Pricing, and Specs option of Dodge Challenger 
+	    driver.findElement(By.xpath("//a[contains(text(),'Dodge Challenger')]")).click();
+	  
+	}
+
+}

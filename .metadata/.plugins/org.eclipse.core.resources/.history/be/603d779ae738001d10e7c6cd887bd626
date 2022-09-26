@@ -1,0 +1,9 @@
+
+public class WebDriverWait {
+
+	public WebElement until(Object elementToBeClickable) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,21 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class VehicleTypeserch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Writing my first selenium code");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://google.com");
+		driver.findElement(By.name("q")).sendKeys("vehicle type ");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+		
+	}
+
+}

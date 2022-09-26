@@ -1,0 +1,19 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
+
+public class TestCase1HomePage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Verify on access the intelli365 website.");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		@SuppressWarnings("unused")
+		WebDriver driver=new Chromedriver();
+		
+		
+	}
+
+}

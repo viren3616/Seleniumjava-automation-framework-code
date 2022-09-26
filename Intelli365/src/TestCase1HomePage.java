@@ -1,0 +1,24 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
+public class TestCase1HomePage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Verify on access the intelli365 website.");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver = new Chromedriver();
+		
+		
+		//Loading the Page
+		driver.get("https://google.com");
+						
+		//Sending keyword vehicle type for search
+		driver.findElement(By.name("q")).sendKeys("intelli365");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	}
+
+}

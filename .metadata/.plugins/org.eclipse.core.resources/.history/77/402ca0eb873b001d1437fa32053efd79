@@ -1,0 +1,36 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Intelli365AboutUs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Verify on access the intelli365 website.");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver=new ChromeDriver();
+		
+		//Loading the Page
+		driver.get("https://google.com");
+		
+		//Sending keyword vehicle type for search
+		driver.findElement(By.name("q")).sendKeys("Intelli365");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	    
+	    // select https://www.intelli365.com//
+	    driver.findElement(By.xpath("//h3[contains(text(),'Intelli 365 – Intelli 365')]")).click();
+	    
+	    // Navigate to Feature Page
+	    driver.findElement(By.xpath("//span[contains(text(),'About us')]")).click();
+	    
+	    // Scrolling down the Innovation Executors area
+	    JavascriptExecutor jse = (JavascriptExecutor) driver;
+	    jse.executeScript("window.scrollBy(0,500);");
+	}
+	
+}
+

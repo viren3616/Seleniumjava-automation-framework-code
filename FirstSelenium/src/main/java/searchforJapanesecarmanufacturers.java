@@ -1,0 +1,19 @@
+
+
+public class searchforJapanesecarmanufacturers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		System.out.println("searchforJapanese car manufacturers");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+
+		//Loading the Page
+		driver.get("https://www.google.com/");
+		
+		
+	}
+
+}

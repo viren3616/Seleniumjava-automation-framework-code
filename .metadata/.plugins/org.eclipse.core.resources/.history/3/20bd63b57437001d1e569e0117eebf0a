@@ -1,0 +1,31 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class VehicleTypeserch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Writing my first selenium code");
+		
+		System.setProperty("webdriver.chrome.driver", "/Users/virenpatel/Downloads/chromedriver");
+		WebDriver driver=new ChromeDriver();
+		//Loading the Page
+		driver.get("https://google.com");
+		//Sending keyword vehicle type for search
+		driver.findElement(By.name("q")).sendKeys("vehicle type ");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	    // select https://www.caranddriver.com/
+	    driver.findElement(By.xpath("//h3[contains(text(),'Vehicle Types, Car Body Styles Explained - Car and')]")).click();
+	    // Searching for Best New Sports Cars of 2022
+	    driver.findElement(By.xpath("//a[normalize-space()='Best New Sports Cars']")).click();
+	    driver.findElement(By.xpath("//body/main[1]/div[5]/div[1]/div[4]/div[7]/div[3]/p[2]/a[1]")).click();
+	    // Searching for Best New Hatchbacks of 2022
+	    ((WebElement) driver.findElements((By) By.cssSelector(" body.locale-en.no-tab.listicle:nth-child(2) main.site-content:nth-child(5) div.content-container.listicle-container:nth-child(6) div.listicle-body div.listicle-body-content div.listicle-slide.listicle-slide-landscape.listicle-slide-image.listicle-slide-multi-retailer:nth-child(7) div.listicle-slide-dek:nth-child(4) p:nth-child(2) > a.body-btn-link"))).click();
+	    
+	}
+
+}
